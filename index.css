@@ -1,0 +1,117 @@
+body {
+    background-color: #dddddd;
+}
+
+/* Parte 1 */
+.margim-tabela {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.margim-formulario {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.nome-form-parametrizacao {
+    width: 16%;
+    margin-right: 3%;
+    padding-left: 10px;
+
+}
+
+.debito-form-parametrizacao {
+    width: 10%;
+    margin-right: 3%;
+    padding-left: 10px;
+}
+
+.credito-form-parametrizacao {
+    width: 10%;
+    margin-right: 3%;
+    padding-left: 10px;
+}
+
+.historico-form-parametrizacao {
+    width: 20%;
+    margin-right: 3%;
+    padding-left: 10px;
+
+}
+.barra-de-rolagem {
+    overflow: auto;
+    height: 175px;
+}
+
+/* Parte 2 */
+
+.nome-form-lancamento {
+    width: 16%;
+    margin-right: 3%;
+    padding-left: 10px;
+
+}
+
+.valor-form-lancamento {
+    width: 8%;
+    margin-right: 3%;
+    padding-left: 10px;
+
+}
+
+.data-form-lancamento {
+    width: 10%;
+    margin-right: 3%;
+    padding-left: 10px;
+
+}
+
+.complemento-form-lancamento {
+    width: 20%;
+    margin-right: 3%;
+    padding-left: 10px;
+    
+}
+
+.invisivel {
+    display: none;
+}
+
+.debito-automatico {
+    width: 8%;
+    margin-right: 3%;
+    padding-left: 10px;
+    background-color: #8d8d8d;
+    border: 0.5px;
+    
+
+}
+
+.credito-automatico {
+    width: 8%;
+    margin-right: 3%;
+    padding-left: 10px;
+    background-color: #8d8d8d;
+    border: 0.5px;
+
+}
+
+.historico-automatico {
+    width: 20%;
+    margin-right: 3%;
+    padding-left: 10px;
+    background-color: #8d8d8d;
+    border: 0.5px;
+
+}
+
+.debito-automatico-label {
+    margin-left: 18%;
+}
+
+.erro {
+    color: red;
+    margin-left: 20%;
+}

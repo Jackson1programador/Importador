@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="index.css" rel="stylesheet">
+  </head>
+    <title>Importador-Contábil</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Importador</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end"" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" aria-current="page" href="#">Treinamento</a>
+                  <a class="nav-link" href="#">Quem somos</a>
+                  <a class="nav-link" href="#">Contato</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+    </header>
+
+    <main>
+        <!-- Parte 1 -->
+        <div>
+
+            <h1 class="text-center m-3">Parametrização Contábil</h1>
+
+            <form class="margim-formulario formulario-completo"> 
+                <label id="nome-form-parametrizacao" type="nome" class="nome-form-parametrizacao-label fs-5">Nome</label>
+                <input for="nome-form-parametrizacao" placeholder="Razão Social" class="nome-form-parametrizacao">
+
+                <label id="debito-form-parametrizacao" type="nome" class="debito-form-parametrizacao-label fs-5">Débito</label>
+                <input for="debito-form-parametrizacao" placeholder="Conta Débito" class="debito-form-parametrizacao">
+
+                <label id="credito-form-parametrizacao" type="nome" class="credito-form-parametrizacao-label fs-5">Crédito</label>
+                <input for="credito-form-parametrizacao" placeholder="Conta Crédito" class="credito-form-parametrizacao">
+
+                <label id="historico-form-parametrizacao" type="nome" class="historico-form-parametrizacao-label fs-5">Histórico</label>
+                <input for="historico-form-parametrizacao" placeholder="Histórico" class="historico-form-parametrizacao">
+
+                <button type="button" class="btn btn-dark envia-formulario">Enviar</button>
+            </form>
+
+
+            
+            <p class="erro invisivel" id="erro-debito-parametrizacao">Debito vazio!!</p>
+            <p class="erro invisivel" id="erro-credito-parametrizacao">Credito vazio!!</p>
+            <p class="erro invisivel" id="erro-nome-parametrizacao">Nome vazio!!</p>
+            <p class="erro invisivel" id="erro-historico-parametrizacao">Histórico vazio!!</p>
+
+            <div class="margim-tabela barra-de-rolagem">
+                <table class="table table-dark table-striped">
+                    <thead >
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Débito</th>
+                        <th scope="col">Crédito</th>
+                        <th scope="col">Histórico</th>
+                    </tr>
+                    </thead>
+                    <tbody class="tabela-parametrizacao">
+                    <tr class="parametrizaçãoTr">
+                        <th scope="row" class="nome-parametrização">Jackson</th>
+                        <td class="debito-parametrização">233</td>
+                        <td class="credito-parametrização">654</td>
+                        <td class="historico-parametrização">Pg. ref boleto</td>
+                    </tr>
+                    <tr class="parametrizaçãoTr">
+                        <th scope="row" class="nome-parametrização">Cagece</th>
+                        <td class="debito-parametrização">546</td>
+                        <td class="credito-parametrização">654</td>
+                        <td class="historico-parametrização">Pg ref água</td>
+                    </tr>
+                    <tr class="parametrizaçãoTr">
+                        <th class="nome-parametrização">Enel</th>
+                        <td class="debito-parametrização">547</td>
+                        <td class="credito-parametrização">654</td>
+                        <td class="historico-parametrização">Pg ref energia elétrica</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+<!-- Parte 2 -->
+        <div>
+
+            <h1 class="text-center m-3">Lançamento Contábil</h1>
+
+            <form class="margim-formulario lancamento-completo"> 
+                <label id="nome-form-lancamento" type="nome" class="nome-form-lancamento-label fs-5">Nome</label>
+                <input for="nome-form-lancamento" placeholder="Razão Social" class="nome-form-lancamento">
+
+                <label id="valor-form-lancamento" type="number" class="valor-form-lancamento-label fs-5">Valor</label>
+                <input for="valor-form-lancamento" placeholder="X.XX" class="valor-form-lancamento">
+
+                <label id="data-form-lancamento" type="date" class="data-form-lancamento-label fs-5">Data</label>
+                <input for="data-form-lancamento" placeholder="XX/XX/XXXX" class="data-form-lancamento">
+
+                <label id="complemento-form-lancamento" type="nome" class="complemento-form-lancamento-label fs-5">Complemento</label>
+                <input for="complemento-form-lancamento" placeholder="Complemento do Histórico" class="complemento-form-lancamento">
+
+                <button type="button" class="btn btn-dark">Enviar</button>
+            </form>
+
+            <form class="margim-formulario lancamento-automatico"> 
+                <label id="debito-automatico" type="nome" class="debito-automatico-label fs-5">Débito</label>
+                <input for="debito-automatico" class="debito-automatico">
+
+                <label id="credito-automatico" type="nome" class="valor-form-lancamento-label fs-5">Crédito</label>
+                <input for="credito-automatico"  class="credito-automatico">
+
+                <label id="historico-automatico" type="nome" class="data-form-lancamento-label fs-5">Histórico</label>
+                <input for="historico-automatico" class="historico-automatico">
+            </form>
+
+            
+            <p class="erro invisivel" id="erro-data">Data incorreta, ultilizar o formato xx/xx/xxxx</p>
+            <p class="erro invisivel" id="erro-valor">Valor incorreta, ultilizar o formato x.xx</p>
+            <p class="erro invisivel" id="erro-debito">Debito vazio!!</p>
+            <p class="erro invisivel" id="erro-credito">Credito vazio!!</p>
+            <p class="erro invisivel" id="erro-nome">Nome vazio!!</p>
+            <p class="erro invisivel" id="erro-historico">Histórico vazio!!</p>
+            <div class="margim-tabela  barra-de-rolagem">
+                <table class="table table-dark table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Débito</th>
+                        <th scope="col">Crédito</th>
+                        <th scope="col">Histórico</th>
+                    </tr>
+                    </thead>
+                    <tbody class="tabela-lancamento">
+                    <tr class="lançamentoTr">
+                        <th scope="row" class="nome-lançamento">Jackson</th>
+                        <td class="data-lançamento">10/12/2022</td>
+                        <td class="valor-lançamento">150.50</td>
+                        <td class="debito-lançamento">233</td>
+                        <td class="credito-lançamento">654</td>
+                        <td class="historico-lançamento">Pg. ref boleto</td>
+                    </tr>
+                    <tr class="lançamentoTr">
+                        <th scope="row" class="nome-lançamento">Cagece</th>
+                        <td class="data-lançamento">13/12/2022</td>
+                        <td class="valor-lançamento">100.00</td>
+                        <td class="debito-lançamento">546</td>
+                        <td class="credito-lançamento">654</td>
+                        <td class="historico-lançamento">Pg ref água</td>
+                    </tr>
+                    <tr class="lançamentoTr">
+                        <th scope="row" class="nome-lançamento">Enel</th>
+                        <td class="data-lançamento">14.12/2022</td>
+                        <td class="valor-lançamento">3050.00</td>
+                        <td class="debito-lançamento">547</td>
+                        <td class="credito-lançamento">654</td>
+                        <td class="historico-lançamento">Pg ref energia elétrica</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="parametrizacao.js"></script>
+    <script src="lancamento.js"></script>
+    
+</body>
+
+</html>
